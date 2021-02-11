@@ -1,14 +1,21 @@
 name: Tests
 on: [push]
 jobs:
-  hello_world_job:
+  tests:
     runs-on: ubuntu-latest
-    name: Test this action
+    name: Tests
     steps:
       - uses: actions/checkout@v2
+
       - uses: ./
         with:
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: "test-branch"
           commit-message: "This is a test commit"
           path: LICENSE .github/workflows
+
+      - uses: ./
+        with:
+          commit-message: "Default suffix"
+          path: |
+            LICENSE
+            README.md
