@@ -3,7 +3,7 @@ author: "Dan Foreman-Mackey"
 description: "Force push to an orphan branch from GitHub Actions"
 inputs:
   github-token:
-    description: "A token for access to GitHub (e.g. \${{ secrets.GITHUB_TOKEN }})"
+    description: "A token for access to GitHub (e.g. 'secrets.GITHUB_TOKEN')"
     required: true
   path:
     description: "A file, directory or wildcard pattern that describes what to upload"
