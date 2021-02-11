@@ -9,15 +9,15 @@ inputs:
     description: "A file, directory or wildcard pattern that describes what to upload"
     required: true
   target-branch:
-    description: "The name of the branch to target"
+    description: "The name of the branch that you want to push to"
     required: false
     default: ""
   branch-suffix:
     description: "A suffix to add to the current branch name if a target is not provided"
     required: false
-    default: "-actions"
+    default: ""
   commit-message:
-    description: "The text for a commit message"
+    description: "The text for a custom commit message"
     required: false
     default: "Automatic commit on GitHub Actions"
 runs:
