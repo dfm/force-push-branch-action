@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # github-token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: "test-branch"
           commit-message: "This is a test commit"
           path: LICENSE .github/workflows
