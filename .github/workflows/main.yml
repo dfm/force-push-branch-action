@@ -1,3 +1,4 @@
+name: Tests
 on: [push]
 jobs:
   hello_world_job:
@@ -10,4 +11,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: "test-branch"
           commit-message: "This is a test commit"
-          path: LICENSE
+          path: LICENSE .github/workflows
