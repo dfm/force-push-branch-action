@@ -15,7 +15,13 @@ if test "${CURRENT_BRANCH}" = "${TARGET_BRANCH}"; then
     exit 1
 fi
 
+# Set the path to the clone
+TARGET_DIRECTORY=$(mktemp -d)
+echo $TARGET_DIRECTORY
+
 # Do it.
+git clone .git $TARGET_DIRECTORY
+cd $TARGET_DIRECTORY
 git checkout --orphan ${TARGET_BRANCH}
 git rm --cached -rf .
 git add -f $1
