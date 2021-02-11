@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Test this action
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: "test-branch"
+          commit-message: "This is a test commit"
+          path: LICENSE

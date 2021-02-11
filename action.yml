@@ -1,0 +1,28 @@
+name: "Force push branch"
+author: "Dan Foreman-Mackey"
+description: "Force push to an orphan branch from GitHub Actions"
+inputs:
+  github-token:
+    description: "A GitHub access token"
+    required: true
+  target-branch:
+    description: "The name of the branch to target"
+    required: true
+  commit-message:
+    description: "The text for a commit message"
+    required: false
+    default: "Automatic commit on GitHub Actions"
+  path:
+    description: "A file, directory or wildcard pattern that describes what to upload"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
+  env:
+    TARGET_BRANCH: ${{ inputs.target-branch }}
+    COMMIT_MESSAGE: ${{ inputs.commit-message }}
+branding:
+  icon: "chevron-right"
+  color: "blue"
