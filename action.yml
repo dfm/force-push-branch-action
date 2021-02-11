@@ -2,6 +2,9 @@ name: "Force push branch"
 author: "Dan Foreman-Mackey"
 description: "Force push to an orphan branch from GitHub Actions"
 inputs:
+  github-token:
+    description: "A token for access to GitHub (e.g. \${{ secrets.GITHUB_TOKEN }})"
+    required: true
   path:
     description: "A file, directory or wildcard pattern that describes what to upload"
     required: true
@@ -23,6 +26,7 @@ runs:
   args:
     - ${{ inputs.path }}
   env:
+    GITHUB_TOKEN: ${{ inputs.github-token }}
     TARGET_BRANCH: ${{ inputs.target-branch }}
     BRANCH_SUFFIX: ${{ inputs.branch-suffix }}
     COMMIT_MESSAGE: ${{ inputs.commit-message }}

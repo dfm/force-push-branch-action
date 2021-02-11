@@ -9,12 +9,14 @@ jobs:
 
       - uses: ./
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: "test-branch"
           commit-message: "This is a test commit"
           path: LICENSE .github/workflows
 
       - uses: ./
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Default suffix"
           path: |
             LICENSE
