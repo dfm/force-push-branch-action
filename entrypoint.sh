@@ -21,7 +21,7 @@ TARGET_DIRECTORY=$(mktemp -d)
 echo $TARGET_DIRECTORY
 
 # Do it.
-git clone .git $TARGET_DIRECTORY
+cp -R . $TARGET_DIRECTORY
 cd $TARGET_DIRECTORY
 git checkout --orphan ${TARGET_BRANCH}
 git rm --cached -rf .
