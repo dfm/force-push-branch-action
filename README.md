@@ -56,7 +56,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: dfm/force-push-branch-action@v1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           branch-suffix: "-auto"
           commit-message: "Committing automatically from GitHub Actions"
           path: |
