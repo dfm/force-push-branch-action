@@ -1,3 +1,6 @@
+> **Warning**
+> **No longer maintained** Use [JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action) or [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) instead.
+
 # Force push branch action
 
 This GitHub action simplifies the process of force pushing an orphan branch to
